@@ -1,0 +1,42 @@
+package mobile;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
+
+public class Manager {
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		List<Iphone> iphoneList = new ArrayList<>();
+		
+		Iphone iphone1 = new Iphone();
+		Iphone iphone2 = new Iphone();
+		Iphone iphone3 = new Iphone();
+		
+		//add 3 iphone
+		
+		iphoneList.add(iphone1);
+		iphoneList.add(iphone2);
+		iphoneList.add(iphone3);
+		
+		for (Iphone iphone : iphoneList) {
+			System.out.println(iphone);
+		}
+		
+		Map<String, Iphone> phoneMapping = new HashMap<>();
+		phoneMapping.put("123-456-7890", iphone1);
+		phoneMapping.put("012-345-6789", iphone2);
+		phoneMapping.put("098-765-4321", iphone3);
+		int phoneCounter = 3;
+		for (Map.Entry<String, Iphone> entry : phoneMapping.entrySet()) {
+            String phoneNumber = entry.getKey();
+
+            System.out.println("Phone" + phoneCounter + " Number: " + phoneNumber);
+            phoneCounter--;
+        }
+	}
+}

@@ -1,0 +1,7 @@
+package mobile;
+
+public class Iphone extends SmartPhone implements MediaPlayer, GPS{
+	public void installApplication(String appName) {
+		System.out.println("Install : " + appName +" Completed. ")
+	}
+}

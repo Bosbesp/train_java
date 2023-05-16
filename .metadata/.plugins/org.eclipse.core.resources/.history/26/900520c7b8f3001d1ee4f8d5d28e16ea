@@ -1,0 +1,23 @@
+package mobile;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Manager {
+	
+	public static void main(String[] args) {
+		List<Iphone> iphoneList = new ArrayList<>();
+		
+		Iphone iphone1 = new Iphone();
+		Iphone iphone2 = new Iphone();
+		Iphone iphone3 = new Iphone();
+		//add 3 iphone
+		iphoneList.add(iphone1);
+		iphoneList.add(iphone2);
+		iphoneList.add(iphone3);
+		
+		for (Iphone iphone : iphoneList) {
+			System.out.println(iphone);
+		}
+	}
+}
